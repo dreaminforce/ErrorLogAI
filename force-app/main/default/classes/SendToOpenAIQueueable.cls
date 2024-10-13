@@ -70,12 +70,13 @@ public with sharing class SendToOpenAIQueueable implements Queueable, Database.A
 
     // Helper method to send an email to the admin
     private void sendEmailToAdmin(Error_Log__c errorLog) {
-        // Get admin email from the Org (can be hardcoded or fetched from Custom Settings)
-        String adminEmail = 'kamal.thakur.dev16@gmail.com'; // Replace with actual admin email
+         // Get admin emails from custom metadata
+        String adminEmails = Error_Log_Metadata_Detail__mdt.getInstance('ErrorLogFields').SenderList__c;
+        List<String> emailList = adminEmails != null ? adminEmails.split(',') : new List<String>();
 
         // Create email message
         Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage();
-        email.setToAddresses(new String[] { adminEmail });
+        email.setToAddresses(emailList);
         email.setSubject('New Error Log Created: ' + errorLog.Application_Name__c);
         email.setPlainTextBody('A new error log has been created. Details: ' + 
                                '\nApplication Name: ' + errorLog.Application_Name__c +
