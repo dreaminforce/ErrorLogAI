@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Error Log Metadata Creator">
+        <div class="slds-m-around_medium">
+            <lightning-combobox
+                name="objectApiNames"
+                label="Select Custom Object"
+                value={selectedObjectApiName}
+                placeholder="Select an object"
+                options={objectApiNames}
+                onchange={handleObjectChange}
+            ></lightning-combobox>
+            <lightning-button
+                label="Create Metadata"
+                onclick={handleCreateMetadata}
+                class="slds-m-top_medium"
+            ></lightning-button>
+        </div>
+    </lightning-card>
+</template>
