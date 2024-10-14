@@ -1,19 +1,41 @@
 <template>
-    <lightning-card title="Error Log Metadata Creator">
-        <div class="slds-m-around_medium">
-            <lightning-combobox
-                name="objectApiNames"
-                label="Select Custom Object"
-                value={selectedObjectApiName}
-                placeholder="Select an object"
-                options={objectApiNames}
-                onchange={handleObjectChange}
-            ></lightning-combobox>
-            <lightning-button
-                label="Create Metadata"
-                onclick={handleCreateMetadata}
-                class="slds-m-top_medium"
-            ></lightning-button>
-        </div>
+    <lightning-card title="Error Log Metadata">
+        <lightning-tabset class="slds-m-around_medium">
+            <!-- Tab 1: Error Log Metadata Creator -->
+            <lightning-tab label="Error Log Metadata Creator">
+                <div class="slds-m-around_medium">
+                    <lightning-combobox
+                        name="objectApiNames"
+                        label="Select Custom Object"
+                        value={selectedObjectApiName}
+                        placeholder="Select an object"
+                        options={objectApiNames}
+                        onchange={handleObjectChange}
+                    ></lightning-combobox>
+                    <lightning-button
+                        label="Create Metadata"
+                        onclick={handleCreateMetadata}
+                        class="slds-m-top_medium"
+                    ></lightning-button>
+                </div>
+            </lightning-tab>
+
+            <!-- Tab 2: Update Sender List -->
+            <lightning-tab label="Update Sender List">
+                <div class="slds-m-around_medium">
+                    <lightning-textarea
+                        label="Enter Email Addresses"
+                        placeholder="Add email addresses, separated by commas"
+                        value={emailList}
+                        onchange={handleEmailListChange}
+                    ></lightning-textarea>
+                    <lightning-button
+                        label="Update Sender List"
+                        onclick={handleUpdateSenderList}
+                        class="slds-m-top_medium"
+                    ></lightning-button>
+                </div>
+            </lightning-tab>
+        </lightning-tabset>
     </lightning-card>
 </template>

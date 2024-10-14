@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>ErrorLog Fields</label>
+    <protected>false</protected>
+    <values>
+        <field>Fields__c</field>
+        <value xsi:type="xsd:string">application_name__c,component_name__c,error_description__c,log__c,related_record__c,type__c,ai_suggestions__c</value>
+    </values>
+    <values>
+        <field>Recipients__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>SenderList__c</field>
+        <value xsi:type="xsd:string">kamal.thakur.dev16@gmail.com,kamalt@grazitti.com</value>
+    </values>
+</CustomMetadata>

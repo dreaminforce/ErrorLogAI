@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recipients__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Comma Separated Emails</inlineHelpText>
+    <label>Recipients</label>
+    <required>false</required>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>
