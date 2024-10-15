@@ -25,5 +25,9 @@
         <members>Error_Log_Metadata_Detail__mdt</members>
         <name>CustomObject</name>
     </types>
+    <types>
+        <members>ErrorBUFF_AI</members>
+        <name>CustomTab</name>
+    </types>
     <version>61.0</version>
 </Package>
